@@ -1,0 +1,238 @@
+
+<!-- /**
+ * Defiantzstrap Theme for e107 v2.x
+ * Base on Bootstrap 3 Theme
+ *
+ * Created by: LaocheXe
+ * Email: forbiddenchaos@gmail.com
+ * Website: www.defiantz.org
+ * Github: https://github.com/LaocheXe
+ *
+ * File: install.xml
+**/ -->
+
+<?xml version='1.0' encoding='utf-8' ?>
+<e107Export version="2.0.0 (git)" timestamp="1387636033" >
+	<database>
+	<dbTable name="generic">
+		<item>
+			<field name="gen_id">1</field>
+			<field name="gen_type">wmessage</field>
+			<field name="gen_datestamp">1145848343</field>
+			<field name="gen_user_id">1</field>
+			<field name="gen_ip">Hello Gaming World!</field>
+			<field name="gen_intdata">0</field>
+			<field name="gen_chardata"><![CDATA[
+[html]This is a modified twitter bootstrap template created for Defiantz Gaming website. It allows e107 to manage the content. This text you are reading is the &quot;Welcome Message&quot; and the items below are &quot;News Items&quot;. Check out Defiantz Gaming Website anbd visit the admin-area to modify.<br><br><a class=&quot;btn btn-primary btn-large &quot; href=&quot;http://defiantz.cf&quot; target=&quot;_blank&quot;>Dediantz Gaming</a>  <a class=&quot;btn btn-primary btn-large &quot; href=&quot;e107_admin/admin.php&quot;>Go to Admin area</a><br>[/html]
+]]></field>
+		</item>
+	</dbTable>
+	<dbTable name="page">
+		<item>
+			<field name="page_id">1</field>
+			<field name="page_title">Article 1</field>
+			<field name="page_sef">article-1</field>
+			<field name="page_chapter">2</field>
+			<field name="page_metakeys"></field>
+			<field name="page_metadscr"></field>
+			<field name="page_text">War Thunder has both a DX9 and a DX11 renderer. These options are in the launcher. DX11 has a few extra graphics features which will make the game look a little nicer. However, if you want to use Durante's downsampling tool GeDoSaTo, you'll need to stick with DX9.
+			
+			Any resolutions you setup in GeDoSaTo will appear within the War Thunder launcher for you to select. These resolutions will still appear even if you choose DX11, and that is because the launcher itself is DX9. If you select a GeDoSaTo resolution and DX11, the game will crash on launch.
+			
+			War Thunder also features a very comprehensive replay viewer. Once you complete a match, you have the option to save and name the replay. You can select replays from the main menu. You'll have the option of watching the replay from your perspective, or swap to any other player in the match. There is also a free camera to watch the replay from any angle. This is great for capturing screenshots or recording video.
+			</field>
+			<field name="page_author">0</field>
+			<field name="page_datestamp">1371420000</field>
+			<field name="page_rating_flag">0</field>
+			<field name="page_comment_flag">0</field>
+			<field name="page_password"></field>
+			<field name="page_class">0</field>
+			<field name="page_ip_restrict"></field>
+			<field name="page_template">default</field>
+			<field name="page_order">9999</field>
+			<field name="menu_name">jumbotron-menu-1</field>
+			<field name="menu_title">Heading 1</field>
+			<field name="menu_text">War Thunder has both a DX9 and a DX11 renderer. These options are in the launcher. DX11 has a few extra graphics features which will make the game look a little nicer. However, if you want to use Durante's downsampling tool GeDoSaTo, you'll need to stick with DX9.
+
+			</field>
+			<field name="menu_image"></field>
+			<field name="menu_template">button</field>
+		</item>
+		<item>
+			<field name="page_id">2</field>
+			<field name="page_title">Article 2</field>
+			<field name="page_sef">article-2</field>
+			<field name="page_chapter">2</field>
+			<field name="page_metakeys"></field>
+			<field name="page_metadscr"></field>
+			<field name="page_text">The PC gaming market is thriving. Hundreds of games are released every month. Some are from established studios, who have been working on PC games non-stop for years or even decades, but this is now the exception. Indie developers are changing the face of Steam. Developers who once made games exclusively for consoles are porting them to the PC for the first time—and some of those games, like Dark Souls, are finding bigger, even more passionate communities than they had before.
+			For developers new to the PC, there can be bumps in the road. As I've learned from my interactions with some developers, at times they simply don't know what PC gamers want and expect from their games: graphics settings, keybindings, modding support, and more. Likewise, gamers often are not fully aware of the restrictions and workloads their wishes impose on developers, and why some of these features may not be included.
+			</field>
+			<field name="page_author">0</field>
+			<field name="page_datestamp">1366149600</field>
+			<field name="page_rating_flag">0</field>
+			<field name="page_comment_flag">0</field>
+			<field name="page_password"></field>
+			<field name="page_class">0</field>
+			<field name="page_ip_restrict"></field>
+			<field name="page_template">default</field>
+			<field name="page_order">9999</field>
+			<field name="menu_name">jumbotron-menu-2</field>
+			<field name="menu_title">Heading 2</field>
+			<field name="menu_text">The PC gaming market is thriving. Hundreds of games are released every month. Some are from established studios, who have been working on PC games non-stop for years or even decades, but this is now the exception. Indie developers are changing the face of Steam. Developers who once made games exclusively for consoles are porting them to the PC for the first time and some of those games, like Dark Souls, are finding bigger, even more passionate communities than they had before.
+
+			</field>
+			<field name="menu_image"></field>
+			<field name="menu_template">button</field>
+		</item>
+		<item>
+			<field name="page_id">3</field>
+			<field name="page_title">Article 3</field>
+			<field name="page_sef">article-3</field>
+			<field name="page_chapter">2</field>
+			<field name="page_metakeys"></field>
+			<field name="page_metadscr"></field>
+			<field name="page_text">Later this year, original Evil Dead trio - director Sam Raimi, producer Bob Tapert and star Bruce Campbell - will reunite for a TV sequel series entitled Ash Vs. Evil Dead. Set to debut on the Starz network, the half-hour comedy will pick up with the titular anithero thirty years after his final battle with the Deadites.
+
+That brief overview alone is an exciting enough prospect to have us reaching for our boomsticks in celebration! However, now the folks at Dread Central have clued us in to a more detailed plot synopsis after reading the pilot script.
+			</field>
+			<field name="page_author">1</field>
+			<field name="page_datestamp">1336600800</field>
+			<field name="page_rating_flag">0</field>
+			<field name="page_comment_flag">0</field>
+			<field name="page_password"></field>
+			<field name="page_class">0</field>
+			<field name="page_ip_restrict"></field>
+			<field name="page_template">default</field>
+			<field name="page_order">9999</field>
+			<field name="menu_name">jumbotron-menu-3</field>
+			<field name="menu_title">Heading 3</field>
+			<field name="menu_text">Later this year, original Evil Dead trio - director Sam Raimi, producer Bob Tapert and star Bruce Campbell - will reunite for a TV sequel series entitled Ash Vs. Evil Dead. Set to debut on the Starz network, the half-hour comedy will pick up with the titular anithero thirty years after his final battle with the Deadites.
+
+			</field>
+			<field name="menu_image"></field>
+			<field name="menu_template">button</field>
+		</item>
+
+		<item>
+			<field name="page_id">4</field>
+			<field name="page_title">Feature 1</field>
+			<field name="page_sef">feature-1</field>
+			<field name="page_chapter">2</field>
+			<field name="page_metakeys"></field>
+			<field name="page_metadscr"></field>
+			<field name="page_text">&quot;What are you doing, Matt?&quot; asked my friend. It was March 2002 and he had spotted me through the window of our college computer room. Why wasn't I in the pub with the rest of our friends? I explained that I was playing a free fantasy MMO called Runescape. Technically, that was true. It was certainly true enough to suffice as an answer for now. 
+			
+			&quot;Oh. Right.&quot; He was clearly unimpressed by the low-resolution 3D blobs trundling around the screen. &quot;Is it to do with killing dragons and goblins?&quot; &quot;Yes,&quot; I lied. &quot;It's just a bit of fun.&quot; I wasn't happy that my new friends at college thought I was spending all my free time killing waves of magical monsters, but it was better than the truth. The truth was that, driven by impatience and greed, I had found myself running a coal mining business fuelled by child labour. </field>
+			<field name="page_author">1</field>
+			<field name="page_datestamp">1344549600</field>
+			<field name="page_rating_flag">0</field>
+			<field name="page_comment_flag">0</field>
+			<field name="page_password"></field>
+			<field name="page_class">0</field>
+			<field name="page_ip_restrict"></field>
+			<field name="page_template">default</field>
+			<field name="page_order">9999</field>
+			<field name="menu_name">feature-menu-1</field>
+			<field name="menu_title">How to build a gaming PC</field>
+			<field name="menu_text"> A few years ago, we invited PC Gamer's tech guru Adam Oxford into a giant changing room to film a short piece about building a new PC. The resulting video has never been seen, but we've finally managed to cut enough of the improbably scary stuff out to get it past YouTube's content filters.
+
+Yes, it is a bit old, but a lot of the points still remain - physically, the act of building a gaming PC hasn't changed at all in the last few years. Not wanting to blow our own trumpets but, parp, this is a great guide to getting started with a self-build, covering everything from how to install a CPU to your very first boot up. 
+
+
+</field>
+			<field name="menu_image"></field>
+			<field name="menu_template">2-column_1:1_text-left</field>
+		</item>
+		<item>
+			<field name="page_id">5</field>
+			<field name="page_title">Feature 2</field>
+			<field name="page_sef">feature-2</field>
+			<field name="page_chapter">2</field>
+			<field name="page_metakeys"></field>
+			<field name="page_metadscr"></field>
+			<field name="page_text">Dust is the enemy of performance and the lifespan of your components. Compressed air is great, but why pay $9 or more for something disposable, that you'll ration in the fear that you'll run out, anyway? Nothing's more effective over your long career as a PC gamer than an electric duster like the Metro ED500. It's not a vacuum (we wouldn't want you inviting static electricity into your PC, right?), but a powerful, motorized air blower that you can plug into any wall socket. I use mine to air out my horrific-smelling hockey equipment, too.</field>
+			<field name="page_author">1</field>
+			<field name="page_datestamp">1347228000</field>
+			<field name="page_rating_flag">0</field>
+			<field name="page_comment_flag">0</field>
+			<field name="page_password"></field>
+			<field name="page_class">0</field>
+			<field name="page_ip_restrict"></field>
+			<field name="page_template">default</field>
+			<field name="page_order">9999</field>
+			<field name="menu_name">feature-menu-2</field>
+			<field name="menu_title">SLI overclocking guide</field>
+			<field name="menu_text"> Have you read our guide to overclocking your graphics card? You should! Overclocking a graphics card today is simpler and safer than ever, and with a bit of tuning you can extend the life of an aging graphics card or get even better performance out of a new one. But what if you don't have just one graphics card? What if you have two, or three, or even four running in SLI? How does that affect the overclocking process?
+
+To answer that question, we had Nvidia distinguished engineer Tom Petersen sit down with us at the LPC, which is outfitted with four GTX Titans. In the video above, Petersen walks us through his overclocking process using EVGA PrecisionX 16 and gives us some tips on multi-GPU overclocking. 
+
+</field>
+			<field name="menu_image"></field>
+			<field name="menu_template">2-column_1:1_text-right</field>
+		</item>
+		<item>
+			<field name="page_id">6</field>
+			<field name="page_title">Feature 3</field>
+			<field name="page_sef">feature-3</field>
+			<field name="page_chapter">2</field>
+			<field name="page_metakeys"></field>
+			<field name="page_metadscr"></field>
+			<field name="page_text">It's debatable whether equipping a standard AM/FM radio with a hard drive and the ability to record broadcasts is particularly useful in the era of internet radio, but there's no denying the new VJ-10 Radio Server from Olympus Japan is a smart little piece of kit.
+
+The pumped-up clock radio goes on sale in Japan in the middle of March for ¥40,000 (£170) and has a stupendously large 37GB internal hard drive (it's probably a 40GB notebook drive, but Olympus hasn't specified), to which 2,500 hours of recordings can be committed. A 3.9-inch LCD helps navigate stored music and on-air stations.</field>
+			<field name="page_author">1</field>
+			<field name="page_datestamp">1349820000</field>
+			<field name="page_rating_flag">0</field>
+			<field name="page_comment_flag">0</field>
+			<field name="page_password"></field>
+			<field name="page_class">0</field>
+			<field name="page_ip_restrict"></field>
+			<field name="page_template">default</field>
+			<field name="page_order">9999</field>
+			<field name="menu_name">feature-menu-3</field>
+			<field name="menu_title"><![CDATA[&#039;Defiantzstrap&#039; is a ready-to-use, Bootstrap 3 updated, multi-purpose HTML theme!]]></field>
+			<field name="menu_text"><![CDATA[
+[html]For more templates and more page options that you can integrate into this website template, visit <a class=&quot;btn btn-primary btn-large &quot; href=&quot;http://defiantz.cf&quot; target=&quot;_blank&quot;>Defiantz Gaming Website</a>!
+[/html]
+]]>
+</field>
+			<field name="menu_image"></field>
+			<field name="menu_template">2-column_2:1_text-left</field>
+		</item>
+
+
+
+
+
+
+	</dbTable>
+	<dbTable name="page_chapters">
+		<item>
+			<field name="chapter_id">1</field>
+			<field name="chapter_parent">0</field>
+			<field name="chapter_name">General</field>
+			<field name="chapter_sef"></field>
+			<field name="chapter_meta_description">Sony has teamed up with BT to add phone functions to the popular Sony PlayStation Portable (PSP) gaming console.</field>
+			<field name="chapter_meta_keywords"></field>
+			<field name="chapter_manager">0</field>
+			<field name="chapter_icon"></field>
+			<field name="chapter_order">0</field>
+			<field name="chapter_template"></field>
+		</item>
+		<item>
+			<field name="chapter_id">2</field>
+			<field name="chapter_parent">1</field>
+			<field name="chapter_name">Chapter 1</field>
+			<field name="chapter_sef"></field>
+			<field name="chapter_meta_description">Drones aren't just for the military any more. Now you can get in on the high-flying spy cam action for cheap: The Extreme Micro-Drone 2.0 is a super lightweight, durable drone that sports a 640 pixel camera module.</field>
+			<field name="chapter_meta_keywords"></field>
+			<field name="chapter_manager">0</field>
+			<field name="chapter_icon"></field>
+			<field name="chapter_order">0</field>
+			<field name="chapter_template"></field>
+		</item>
+		
+	</dbTable>
+	</database>
+</e107Export>

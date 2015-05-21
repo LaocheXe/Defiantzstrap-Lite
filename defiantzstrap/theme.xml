@@ -1,0 +1,58 @@
+
+<!-- /**
+ * Defiantzstrap Theme for e107 v2.x
+ * Base on Bootstrap 3 Theme
+ *
+ * Created by: LaocheXe
+ * Email: forbiddenchaos@gmail.com
+ * Website: www.defiantz.org
+ * Github: https://github.com/LaocheXe
+ *
+ * File: theme.xml
+**/ -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<e107Theme name="Defiantzstrap" version="2.0" date="2015-04-15" compatibility="2.0">
+	<author name ="LaocheXe" email="laochexe@defiantz.org" url="http://www.defiantz.org" />
+	<summary>Defiantzstrap is a e107 theme</summary>
+	<description>A bootstrap 3 theme for Defiantz Gaming</description>
+	<category>gaming</category>
+	<plugins>
+		<plugin name='featurebox' url='core' />
+		<plugin name='gallery' url='core' />
+		<plugin name='voice' url='http://defiantz.org/download/4/voice-exesystem' />
+        <plugin name='rss_menu' url='core' />
+	</plugins>
+	<keywords>
+		<word>bootstrap</word>
+		<word>clean</word>
+	</keywords>
+	<screenshots>
+		<image>preview_frontend.png</image>
+	</screenshots>
+	<stylesheets>
+		<css file="style.css" name="Default"  />
+        <css file="*" name="*"  />
+	</stylesheets>
+	<layouts>
+		<layout name='jumbotron_home' title='Jumbotron (home)' default='false' />
+		<layout name='modern_business_home' title='Modern Business: Home page carousel with fixed custom-menus'>
+			<custompages>FRONTPAGE</custompages>	
+		</layout>
+		<layout name='jumbotron_full' title='Jumbotron (full-width)'  >
+            <custompages>forum</custompages>
+		</layout>
+		<layout name='jumbotron_sidebar_right' title='Jumbotron (sidebar-right)' default='true' >
+			<custompages>/news</custompages>
+			<menuPresets>
+				<area id='1'>
+					<menu name='search' />
+					<menu name='news_categories' />
+					<menu name='other_news' />
+					<menu name='other_news2' />
+					<menu name='blogcalendar' />
+				</area>
+			</menuPresets>	
+		</layout>
+	</layouts>
+</e107Theme>
