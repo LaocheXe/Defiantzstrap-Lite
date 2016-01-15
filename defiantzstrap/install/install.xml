@@ -1,16 +1,3 @@
-
-<!-- /**
- * Defiantzstrap Theme for e107 v2.x
- * Base on Bootstrap 3 Theme
- *
- * Created by: LaocheXe
- * Email: forbiddenchaos@gmail.com
- * Website: www.defiantz.org
- * Github: https://github.com/LaocheXe
- *
- * File: install.xml
-**/ -->
-
 <?xml version='1.0' encoding='utf-8' ?>
 <e107Export version="2.0.0 (git)" timestamp="1387636033" >
 	<database>
