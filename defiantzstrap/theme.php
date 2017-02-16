@@ -11,7 +11,7 @@
  *
  * File: theme.php
 **/
- 
+
 if (!defined('e107_INIT')) { exit; }
 
 define("BOOTSTRAP", 	3);
@@ -27,128 +27,19 @@ e107::css('theme', 			'css/font-awesome.min.css');
 e107::js('theme', 'js/bootstrap-dropdown-multilevel.js');
 e107::css('theme', 'css/bootstrap-dropdown-multilevel.css');
 
-e107::js("footer-inline", 	"$('.e-tip').tooltip({container: 'body'})"); // activate bootstrap tooltips. 
-					
-define('OTHERNEWS_COLS',false); // no tables, only divs. 
-define('OTHERNEWS_LIMIT', 3); // Limit to 3. 
-define('OTHERNEWS2_COLS',false); // no tables, only divs. 
-define('OTHERNEWS2_LIMIT', 3); // Limit to 3. 
+e107::js("footer-inline", 	"$('.e-tip').tooltip({container: 'body'})"); // activate bootstrap tooltips.
+
+define('OTHERNEWS_COLS',false); // no tables, only divs.
+define('OTHERNEWS_LIMIT', 3); // Limit to 3.
+define('OTHERNEWS2_COLS',false); // no tables, only divs.
+define('OTHERNEWS2_LIMIT', 3); // Limit to 3.
 define('COMMENTLINK', 	e107::getParser()->toGlyph('fa-comment'));
 define('COMMENTOFFSTRING', '');
 
 define('PRE_EXTENDEDSTRING', '<br />');
 
-/**
- * @param string $caption
- * @param string $text
- * @param string $id : id of the current render
- * @param array $info : current style and other menu data. 
- */
-function tablestyle($caption, $text, $id='', $info=array()) 
-{
-//	global $style; // no longer needed. 
-	
-	$style = $info['setStyle'];
-	
-	echo "<!-- tablestyle: style=".$style." id=".$id." -->\n\n";
-	
-	$type = $style;
-	if(empty($caption))
-	{
-		$type = 'box';
-	}
-	
-	if($style == 'navdoc' || $style == 'none')
-	{
-		echo $text;
-		return;
-	}
-	
-	/*
-	if($id == 'wm') // Example - If rendered from 'welcome message' 
-	{
-		
-	}
-	
-	if($id == 'featurebox') // Example - If rendered from 'featurebox' 
-	{
-		
-	}	
-	*/
-	
-	
-	if($style == 'jumbotron')
-	{
-		echo '<div class="jumbotron">
-      	<div class="container">';
-        	if(!empty($caption))
-	        {
-	            echo '<h1>'.$caption.'</h1>';
-	        }
-        echo '
-        	'.$text.'
-      	</div>
-    	</div>';	
-		return;
-	}
-	
-	if($style == 'col-md-4' || $style == 'col-md-6' || $style == 'col-md-8')
-	{
-		echo ' <div class="col-xs-12 '.$style.'">';
-		
-		if(!empty($caption))
-		{
-            echo '<h2>'.$caption.'</h2>';
-		}
-
-		echo '
-          '.$text.'
-        </div>';
-		return;	
-		
-	}
-		
-	if($style == 'menu')
-	{
-		echo '<div class="panel panel-default">
-	  <div class="panel-heading">'.$caption.'</div>
-	  <div class="panel-body">
-	   '.$text.'
-	  </div>
-	</div>';
-		return;
-		
-	}	
-
-	if($style == 'portfolio')
-	{
-		 echo '
-		 <div class="col-lg-4 col-md-4 col-sm-6">
-            '.$text.'
-		</div>';	
-		return;
-	}
-
-
-
-	// default.
-
-	if(!empty($caption))
-	{
-		echo '<h2 class="caption">'.$caption.'</h2>';
-	}
-
-	echo $text;
-
-
-					
-	return;
-	
-	
-	
-}
-
 // Edit Menu Buttons Styles
+/*
 if($theme_pref['editbuttons'] == 'disable')
 {
 	$editbuttons = '<style>
@@ -166,10 +57,121 @@ elseif($theme_pref['editbuttons'] == 'enable')
 	}
 	</style>';
 }
+*/
+/**
+ * @param string $caption
+ * @param string $text
+ * @param string $id : id of the current render
+ * @param array $info : current style and other menu data.
+ */
+function tablestyle($caption, $text, $id='', $info=array())
+{
+//	global $style; // no longer needed.
+
+	$style = $info['setStyle'];
+
+	echo "<!-- tablestyle: style=".$style." id=".$id." -->\n\n";
+
+	$type = $style;
+	if(empty($caption))
+	{
+		$type = 'box';
+	}
+
+	if($style == 'navdoc' || $style == 'none')
+	{
+		echo $text;
+		return;
+	}
+
+	/*
+	if($id == 'wm') // Example - If rendered from 'welcome message'
+	{
+
+	}
+
+	if($id == 'featurebox') // Example - If rendered from 'featurebox'
+	{
+
+	}
+	*/
+
+
+	if($style == 'jumbotron')
+	{
+		echo '<div class="jumbotron">
+      	<div class="container">';
+        	if(!empty($caption))
+	        {
+	            echo '<h1>'.$caption.'</h1>';
+	        }
+        echo '
+        	'.$text.'
+      	</div>
+    	</div>';
+		return;
+	}
+
+	if($style == 'col-md-4' || $style == 'col-md-6' || $style == 'col-md-8')
+	{
+		echo ' <div class="col-xs-12 '.$style.'">';
+
+		if(!empty($caption))
+		{
+            echo '<h2>'.$caption.'</h2>';
+		}
+
+		echo '
+          '.$text.'
+        </div>';
+		return;
+
+	}
+
+	if($style == 'menu')
+	{
+		echo '<div class="panel panel-default">
+	  <div class="panel-heading">'.$caption.'</div>
+	  <div class="panel-body">
+	   '.$text.'
+	  </div>
+	</div>';
+		return;
+
+	}
+
+	if($style == 'portfolio')
+	{
+		 echo '
+		 <div class="col-lg-4 col-md-4 col-sm-6">
+            '.$text.'
+		</div>';
+		return;
+	}
+
+
+
+	// default.
+
+	if(!empty($caption))
+	{
+		echo '<h2 class="caption">'.$caption.'</h2>';
+	}
+
+	echo $text;
+
+
+
+	return;
+
+
+
+}
+
 
 // applied before every layout.
 // Added option to edable/disable Edit Menu Buttons - eXe
-$LAYOUT['_header_'] = ' '.$editbuttons.'
+$LAYOUT['_header_'] = '
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -188,11 +190,11 @@ $LAYOUT['_header_'] = ' '.$editbuttons.'
       </div>
     </div>
 
-  
-	
+
+
 ';
 
-// applied after every layout. 
+// applied after every layout.
 $LAYOUT['_footer_'] = '  <hr>
 <div class="row">
   {SETSTYLE=default}
@@ -246,7 +248,7 @@ $LAYOUT['_footer_'] = '  <hr>
 			</div>
 		</div>
 	</footer>
-</div>	
+</div>
     </div> <!-- /container -->
 ';
 
@@ -257,16 +259,16 @@ $LAYOUT['_footer_'] = '  <hr>
 $LAYOUT['jumbotron_home'] =  <<<TMPL
   <!-- Main jumbotron for a primary marketing message or call to action -->
     {SETSTYLE=jumbotron}
-   
-	{WMESSAGE=force}   
+
+	{WMESSAGE=force}
 
 	{SETSTYLE=default}
-	<div class="container">	
+	<div class="container">
 	{ALERTS}
 	{MENU=1}
-	
+
 	{---}
-	
+
 	</div>
     <div class="container">
       <!-- Example row of columns -->
@@ -298,20 +300,20 @@ if($theme_pref['portfolio'] == 'enable')
             <h2>Display Some Work on the Home Page Portfolio</h2>
             <hr>
           </div>
-          
+
 		  {SETSTYLE=portfolio}
 		  {SETIMAGE: w=700&h=500&crop=1}
-		  {GALLERY_PORTFOLIO: placeholder=1&limit=6}   
-		  
+		  {GALLERY_PORTFOLIO: placeholder=1&limit=6}
+
         </div><!-- /.row -->
 
       </div><!-- /.container -->
 
-    </div><!-- /.section -->';	
+    </div><!-- /.section -->';
 }
 elseif($theme_pref['portfolio'] == 'disable')
 {
-	$portfolio .= '';		
+	$portfolio .= '';
 }
 
 $LAYOUT['modern_business_home'] =  <<<TMPL
@@ -320,15 +322,15 @@ $LAYOUT['modern_business_home'] =  <<<TMPL
 <!-- Main jumbotron for a primary marketing message or call to action -->
     {SETSTYLE=none}
 
-	{FEATUREBOX}   
-	
-	<div class="container">	
+	{FEATUREBOX}
+
+	<div class="container">
 	{ALERTS}
-<!-- Start Menu 1 --> 
+<!-- Start Menu 1 -->
 	{MENU=1}
-<!-- End Menu 1 --> 
+<!-- End Menu 1 -->
 	</div>
-	
+
 	<div class="section1">
 	    <div class="container">
 	      <!-- Example row of columns -->
@@ -340,21 +342,21 @@ $LAYOUT['modern_business_home'] =  <<<TMPL
 	      </div>
 		</div>
 	</div>
-		
+
 {SETSTYLE=default}
 
 	<div class="section-colored text-center">
       <div class="container">
         <div class="row">
             <div class="col-lg-12">
-            	{WMESSAGE}   
+            	{WMESSAGE}
             <hr>
           </div>
         </div><!-- /.row -->
       </div><!-- /.container -->
 
   	</div><!-- /.section-colored -->
-	
+
 	$portfolio
 
 {SETSTYLE=none}
@@ -364,29 +366,29 @@ $LAYOUT['modern_business_home'] =  <<<TMPL
 		<div class="container">
 
 			<div class="row">
-			
+
         		{CMENU=feature-menu-1}
-				
+
 			</div>
-			
+
 		</div><!-- /.container -->
 
 	</div><!-- /.section-colored -->
 
 
-	
+
 	 <div class="section2">
-	
+
 		<div class="container">
-		
+
 			<div class="row">
-			
+
 				{CMENU=feature-menu-2}
-				
+
 			</div>
-			
+
 		</div><!-- /.container -->
-	
+
 	</div><!-- /.section -->
 
 
@@ -394,9 +396,9 @@ $LAYOUT['modern_business_home'] =  <<<TMPL
 	<div class="container">
 
 		<div class="row well">
-      
+
         	{CMENU=feature-menu-3}
-		
+
 		</div><!-- /.row -->
 
 	</div><!-- /.container -->
@@ -414,42 +416,42 @@ $LAYOUT['modern_business_home'] =  <<<TMPL
 TMPL;
 
 $LAYOUT['jumbotron_full'] = '
-   
+
 	{SETSTYLE=default}
-	<div class="container">	
+	<div class="container">
 	{ALERTS}
    	 {MENU=1}
 	{---}
-	
+
 	</div>
     <div class="container">
-   
-     
+
+
 
 	';
 
 
 
 $LAYOUT['jumbotron_sidebar_right'] =  '
-   
+
 	{SETSTYLE=default}
-	<div class="container">	
+	<div class="container">
 	{ALERTS}
 		<div class="row">
-   			<div class="col-xs-12 col-md-8">	
-   		
+   			<div class="col-xs-12 col-md-8">
+
 				{---}
-	
+
  			</div>
         	<div id="sidebar" class="col-xs-12 col-md-4">
         	{SETSTYLE=menu}
         		{MENU=1}
         	</div>
       </div>
-	
+
 	</div>
     <div class="container">
-      
+
 
 	';
 
@@ -482,7 +484,7 @@ $HEADER['default'] = '
 <div class="container-fluid">
 	<div class="row-fluid">
 		 <div class="span3">
-           {NAVIGATION|s=side}          
+           {NAVIGATION|s=side}
           {SETSTYLE=menu}
           {MENU=1}
         </div><!--/span-->
@@ -495,13 +497,13 @@ $HEADER['default'] = '
 
 $FOOTER['default'] = '
 		 {SETSTYLE=span4}
-      	
+
 		</div><!--/span-->
 	</div><!--/row-->
 
 <hr>
 
-<footer class="center"> 
+<footer class="center">
 	{SITEDISCLAIMER}
 </footer>
 
@@ -512,23 +514,23 @@ $HEADER['default-home'] = $HEADER['default'];
 
 
 $FOOTER['default-home'] = '
-	
+
 		 {SETSTYLE=span4}
-		 
+
 		 <div class="row-fluid">
             {MENU=2}
       	</div><!--/row-->
 		 <div class="row-fluid">
             {MENU=3}
-      	</div><!--/row-->	
-      	
+      	</div><!--/row-->
+
 		</div><!--/span-->
 	</div><!--/row-->
 
 <hr>
 
-<footer class="center"> 
-		{SITEDISCLAIMER} 
+<footer class="center">
+		{SITEDISCLAIMER}
 </footer>
 
 </div><!--/.fluid-container-->';
@@ -543,7 +545,7 @@ $FOOTER['default-home'] = '
 
 
 // HERO http://twitter.github.com/bootstrap/examples/hero.html
-//FIXME insert shortcodes while maintaining only bootstrap classes. 
+//FIXME insert shortcodes while maintaining only bootstrap classes.
 
 $HEADER['hero'] = '
 
@@ -588,15 +590,15 @@ $HEADER['hero'] = '
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">';
-	  
+
 	  /*
         <h1>Hello, world!</h1>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
      */
-     
-     
-//FIXME insert shortcodes while maintaining classes. 
+
+
+//FIXME insert shortcodes while maintaining classes.
 $FOOTER['hero'] = '
  </div>
 
@@ -629,7 +631,7 @@ $FOOTER['hero'] = '
 
 
 // Marketing Narrow - http://twitter.github.com/bootstrap/examples/marketing-narrow.html
-//FIXME insert shortcodes while maintaing classes. 
+//FIXME insert shortcodes while maintaing classes.
 
 $HEADER['marketing-narrow'] = '
  <div class="container-narrow">
@@ -648,11 +650,11 @@ $HEADER['marketing-narrow'] = '
       <div class="jumbotron">
         <h1>Super awesome marketing speak!</h1>
         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <a class="btn btn-large btn-success" href="#">Sign up today</a>   
+        <a class="btn btn-large btn-success" href="#">Sign up today</a>
 ';
 
 
-//FIXME insert shortcodes while maintaing classes. 
+//FIXME insert shortcodes while maintaing classes.
 
 $FOOTER['marketing-narrow'] = '
 </div>
@@ -690,7 +692,7 @@ $FOOTER['marketing-narrow'] = '
       </div>
 
     </div> <!-- /container -->
-    
+
 ';
 
 
@@ -706,8 +708,8 @@ $FOOTER['marketing-narrow'] = '
 
  */
 
- 
- 
+
+
 $HEADER['docs'] = <<<TMPL
 
   <!-- Navbar
@@ -743,13 +745,13 @@ $HEADER['docs'] = <<<TMPL
     <!-- Docs nav
     ================================================== -->
     <div class="row">
-    
+
       <div class="span3 bs-docs-sidebar">
       {SETSTYLE=navdoc}
 	  {PAGE_NAVIGATION: template=navdocs&auto=1}
       </div>
 		{SETSTYLE=doc}
-	  
+
       <div class="span9">
 
 
@@ -779,17 +781,17 @@ $FOOTER['docs'] = <<<TMPL
         </ul>
         -->
       </div>
-    </footer> 
- 
- 
- 
+    </footer>
+
+
+
 TMPL;
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
 $NEWSCAT = "\n\n\n\n<!-- News Category -->\n\n\n\n
 	<div style='padding:2px;padding-bottom:12px'>
 	<div class='newscat_caption'>
