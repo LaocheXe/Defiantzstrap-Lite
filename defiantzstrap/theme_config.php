@@ -30,6 +30,7 @@ class theme_defiantzstrap implements e_theme_config
 		$theme_pref['usernav_placement'] 	= $_POST['usernav_placement'];
 		$theme_pref['branding'] 	        = $_POST['branding'];
 		$theme_pref['portfolio']			= $_POST['portfolio'];
+		$theme_pref['editbuttons']			= $_POST['editbuttons'];
 
 		$pref->set('sitetheme_pref', $theme_pref);
 		return $pref->dataHasChanged();
@@ -63,8 +64,12 @@ class theme_defiantzstrap implements e_theme_config
 		$var[3]['html']			= $frm->select('portfolio', $portfolioOpts, e107::pref('theme', 'portfolio', 'enable'),'useValues=1');
 		$var[3]['help']			= LAN_THEME_PORTO_HELP;
 		
-		$var[4]['caption']		= LAN_THEME_SUPPORT;
-		$var[4]['html']			= LAN_THEME_SUPPORT_MESSAGE;
+		$var[4]['caption']		= "Edit Menu Buttons";
+		$var[4]['html']			= $frm->select('editbuttons', array('disable', 'enable'), e107::pref('theme', 'editbuttons', 'disable'),'useValues=1' );
+		$var[4]['help']			= "";
+		
+		$var[5]['caption']		= LAN_THEME_SUPPORT;
+		$var[5]['html']			= LAN_THEME_SUPPORT_MESSAGE;
 		
 	//	$var[1]['caption'] 	= "Sample configuration field 2";
 	//	$var[1]['html'] 	= $frm->text('_blank_example2', e107::pref('theme', 'example2', 'default'));

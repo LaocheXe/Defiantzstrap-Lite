@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<e107Export version="2.0.0 (git)" timestamp="1387636033" >
+<e107Export version="2.0.1 (git)" timestamp="1387636033" >
 	<database>
 	<dbTable name="generic">
 		<item>

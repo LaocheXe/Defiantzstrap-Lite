@@ -148,8 +148,28 @@ function tablestyle($caption, $text, $id='', $info=array())
 	
 }
 
+// Edit Menu Buttons Styles
+if($theme_pref['editbuttons'] == 'disable')
+{
+	$editbuttons = '<style>
+	.fa-edit::before, .fa-pencil-square-o::before {
+    	content: "";
+	}
+	</style>
+	';
+}
+elseif($theme_pref['editbuttons'] == 'enable')
+{
+	$editbuttons = '<style>
+	.fa-edit::before, .fa-pencil-square-o::before {
+    	content: "";
+	}
+	</style>';
+}
+
 // applied before every layout.
-$LAYOUT['_header_'] = '
+// Added option to edable/disable Edit Menu Buttons - eXe
+$LAYOUT['_header_'] = ' '.$editbuttons.'
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
